@@ -1,7 +1,6 @@
 class CompletionsController < ApplicationController
   def create
-    # rails gives us todo_id by default
-    todo.touch :completed_at
+    todo.complete!
     redirect_to todos_path
   end
 
